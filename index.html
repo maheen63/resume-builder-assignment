@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="buildResume">
+
+      <div class="main">
+        <div class="form" id="buildForm">
+          <div class="heading">
+            <h1>Build Your Resume</h1>
+          </div>
+          <form action="" id="resumeForm">
+            <div class="PersonalInfo">
+              <h2>Personal Information</h2>
+              <span
+                >Name:<input
+                  type="text"
+                  id="ConName"
+                  placeholder="Enter your name"
+                  required
+              /></span>
+              <span
+                >Gmail<input
+                  type="text"
+                  id="ConGmail"
+                  placeholder="Enter your gmail"
+                  required
+              /></span>
+            </div>
+            <div class="Education">
+              <h2>Education</h2>
+              <span
+                ><input
+                  type="text"
+                  id="ConEdu"
+                  placeholder="Your last qualification"
+                  required
+              /></span>
+            </div>
+            <div class="Skills">
+              <h2>Skills</h2>
+              <span
+                ><input
+                  type="text"
+                  id="ConSkills"
+                  placeholder="Enter your Skills"
+                  required
+              /></span>
+            </div>
+            <div class="Experience">
+              <h2>Experience</h2>
+              <span
+                ><input
+                  type="text"
+                  id="ConExp"
+                  placeholder="Years of Experience"
+                  required
+              /></span>
+            </div>
+            <div class="btn">
+              <button type="submit">Check Below</button>
+            </div>
+          </form>
+        </div>
+
+<h1 class="show">Check Your Resume</h1>
+<div class="resume">
+  <div class="personalInformation">
+    <div class="profilePicture">
+ 
+    </div>
+    <div class="contactDetails">
+      <div class="name" id="resName"></div>
+    </div>
+  </div>
+  <div class="education">
+    <span class="edu">
+      <h2>Education</h2>
+      <img src="pngwing.com.png" alt="" />
+    </span>
+    <div class="sec1" id="resEdu"></div>
+  </div>
+  <div class="contact">
+    <span>
+      <h2>Contact</h2>
+      <img src="pngwing.com.png" alt="" />
+    </span>
+    <div class="sec4" id="resGmail"></div>
+  </div>
+  <div class="skills">
+    <span>
+      <h2>Skills</h2>
+      <img src="pngwing.com.png" alt="" />
+    </span>
+    <div class="sec2" id="resSkills"></div>
+  </div>
+  <div class="workExperience">
+    <span>
+      <h2>Experience</h2>
+      <img src="pngwing.com.png" alt="" />
+    </span>
+    <div class="sec3" id="resExp"></div>
+  </div>
+</div>
+<div class="btn2">
+  <button id="downloadBtn">Download Your Resume</button>
+</div>
+
+        <div class="uniqueUrl">
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Professional Resume Builder</h1>
+        <div class="resume-builder">
+            <div class="form-section">
+                <form id="resumeForm">
+                    <h2>Personal Information</h2>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <input type="text" id="location" name="location" placeholder="Location" required>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+
+                    <h2>Education</h2>
+                    <div id="educationContainer"></div>
+                    <button type="button" id="addEducation" class="add-btn">Add Education</button>
+
+                    <h2>Work Experience</h2>
+                    <div id="experienceContainer"></div>
+                    <button type="button" id="addExperience" class="add-btn">Add Experience</button>
+
+                    <h2>Skills</h2>
+                    <div id="skillsContainer"></div>
+                    <button type="button" id="addSkill" class="add-btn">Add Skill</button>
+
+                    <button type="submit" class="submit-btn" style="margin-top: 20px;" >Generate Resume</button>
+                </form>
+            </div>
+            <div class="preview-section">
+                <h2>Resume Preview</h2>
+                <div id="resumePreview" class="resume-preview"></div>
+                <button id="downloadResume" class="download-btn ">Download Resume</button>
+                <div id="shareLink" class="share-link uniqueUrl"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
